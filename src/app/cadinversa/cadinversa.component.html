@@ -1,0 +1,29 @@
+<br>
+<h1 class="text-center">Cadena Inversa</h1>
+<hr>
+<br>
+<div class="container">
+    <form (ngSubmit)="enviado(f)" #f="ngForm" class="login100-form validate-form flex-sb flex-w">
+        <div class="mb-3">
+            <label class="form-label">Cadena a invertir</label>
+            <div id="flx">
+                <input type="text" class="form-control" required name="str" [(ngModel)]="cadenaVieja" id="inp">
+                <div class="text-end">
+                    <i (click)="borrar()" class="fas fa-times"></i>
+                </div>
+            </div>
+            <span *ngIf="f.submitted && f.controls['str'].errors" class="text-danger">Debe escribir una cadena</span>
+        </div>
+        <div class="text-center">
+            <button type="submit" class="btn btn-info">Conversión</button>
+        </div>
+        <br>
+        <br>
+        <fieldset disabled>
+            <div class="mb-3">
+                <label for="disabledTextInput" class="form-label">Cadena inversa</label>
+                <input type="text" class="form-control" [(ngModel)]="cadenaNueva" name="str2">
+            </div>
+        </fieldset>
+    </form>
+</div>

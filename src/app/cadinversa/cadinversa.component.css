@@ -1,0 +1,13 @@
+i {
+    font-size: 2rem;
+    color: red;
+    cursor: pointer;
+}
+
+#flx {
+    display: flex;
+}
+
+#inp {
+    margin-right: 5px;
+}
